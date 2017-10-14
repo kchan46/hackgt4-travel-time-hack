@@ -1,3 +1,3 @@
-document.getElementById("next_page").onclick = function () {
+function redirect() {
     location.href="second_page.html";
 }

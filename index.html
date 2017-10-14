@@ -2,28 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>[HackGT 2017] Delta Travel Time Challenge</title>
     <script type="text/javascript" src="javascript/script.js"></script>
 </head>
 <body>
-    <h1>Welcome</h1>
+    
+    <h1></h1>
+    <h1>Delta Travel Time Calculator</h1>
     <form name="form" id="first_form" method="post">
         Input Home Address:
         <p>
-            <input id="address" type="text">
+            <input id="address" type="text"> or 
             <button id="use_my_location" type="submit" class="button">
                 Use My Location
             </button>
         </p>
-        Choose Airport:
+        Input Date of Flight Departure (yyyy-mm-dd):
         <p>
-            <input id="airport" type="text">
+            <input id="date_of_flight" type="text">
         </p>
         Input Flight Number:
         <p>
             <input id="flight_number" type="text">
         </p>
         <p>
+            <! do this with js later to make sure it saves input data ->
             <button id="next_page" type="button" onclick="redirect();">Continue</button>
         </p>
     </form>

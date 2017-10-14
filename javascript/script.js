@@ -46,3 +46,19 @@ function getTSA() {
 function getPhone() {
     return myStorage.getItem("phone");
 }
+
+function getCurrentTime() {
+    var currentTime = new Date()
+    var hours = currentTime.getHours()
+    var minutes = currentTime.getMinutes()
+    if (minutes < 10){
+        minutes = "0" + minutes
+    }
+    time = hours + ":" + minutes + " "
+    if(hours > 11){
+        time = time + "PM"
+    } else {
+        time = time + "AM"
+    }​
+    return time;
+}

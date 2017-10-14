@@ -1,5 +1,6 @@
 function redirect() {
     location.href="second_page.html";
+
 }
 
 function redirect2() {
@@ -8,4 +9,14 @@ function redirect2() {
 
 function redirect3() {
     location.href="index.html";
+}
+
+function returnOrigin() 
+{
+
+   return document.getElementById("address").value;
+}
+
+function returnAddress() {
+
 }

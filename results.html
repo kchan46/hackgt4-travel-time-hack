@@ -53,10 +53,11 @@
         
 </body>
 
-<iframe
-  width="450"
-  height="250"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyBzbVhRXdJ3CRpp1uhELInU0lDCk9_lHyI&origin=texas&destination=Atlanta" allowfullscreen>
-</iframe>
+
+<iframe id="showskill" scrolling="yes" height="350" width ="350" src=""></iframe>
+    <script>
+        document.getElementById("showskill").src = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyBzbVhRXdJ3CRpp1uhELInU0lDCk9_lHyI&origin=" + returnOrigin() + "&destination=Telemark+Norway"
+
+    </script>
+
 </html>

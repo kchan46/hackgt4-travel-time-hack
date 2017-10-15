@@ -46,3 +46,23 @@ function getTSA() {
 function getPhone() {
     return myStorage.getItem("phone");
 }
+
+function getTotalTimeEstimated() {
+    return "1 hr 9 min";
+}
+
+function getRecommendedDepartureTime() {
+    return "8:37 AM";
+}
+
+function getArrivalTimeAtGate() {
+    return "10:10 AM";
+}
+
+function getGoogleMapsTravelTime() {
+    return "14 minutes";
+}
+
+function getEstimatedParkingTime() {
+    return "15 minutes";
+}

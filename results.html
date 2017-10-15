@@ -16,11 +16,13 @@
         setInterval ("document.getElementById ('date-time').firstChild.data = new Date().toLocaleString()", 50)
       }
     </script>
-    Arrival Time (today): __________
-    
     <p>
       Recommended Departure Time: ___________
     </p>
+
+    Arrival Time at Gate (today): __________
+    
+    
     <h1> Breakdown </h1>
     <p id="morning-routine"></p>
     <script>
@@ -35,7 +37,7 @@
       Google Maps Travel Time: __________
     </p>
 
-    Esimtated Parking/Luggage Time: __________
+    Estimated Parking/Luggage Time: __________
     <p>
       TSA-line time: ___________
     </p>
@@ -47,7 +49,7 @@
   <iframe id="showskill" scrolling="yes" height="350" width ="350" src=""></iframe>
   <script>
     if (getAddress() == "" || getAirport() == "") {
-      document.getElementById("showskill").src = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyBzbVhRXdJ3CRpp1uhELInU0lDCk9_lHyI&origin=atlanta&destination=Hartsfied Jackson Airport";
+      document.getElementById("showskill").src = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyBzbVhRXdJ3CRpp1uhELInU0lDCk9_lHyI&origin=Georgia Tech&destination=Hartsfied Jackson Airport";
     } else {
       document.getElementById("showskill").src = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyBzbVhRXdJ3CRpp1uhELInU0lDCk9_lHyI&origin=" + getAddress() + "&destination=" + getAirport();
     }

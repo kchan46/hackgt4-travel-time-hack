@@ -19,6 +19,20 @@ function redirect3() {
     location.href="index.html";
 }
 
+function setAutocompletes() {
+    var defaultBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(-90, -180),
+        new google.maps.LatLng(90, 180));
+
+    var options = {bounds: defaultBounds};
+
+    var addressInput = document.getElementById("address");
+    var autocompleteAddress = new google.maps.places.Autocomplete(addressInput, options);
+
+    var airportInput = document.getElementById("airport");
+    var autocompleteAirport = new google.maps.places.Autocomplete(airportInput, options);
+}
+
 function getAddress() {
     return myStorage.getItem("address");
 }

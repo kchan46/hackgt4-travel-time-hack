@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script type="text/javascript" src="javascript/script.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY-HBuFlqUGom1ylL1clL0_JaM-ubD2iE&libraries=places"></script>
 </head>
-<body>
+<body onload="setAutocompletes();">
     
     <h1></h1>
     <h1>Delta Travel Time Calculator</h1>
-    <form name="form" id="first_form" method="get" action="results.html">
+    <form name="form" id="first_form" method="get">
         Input Home Address:
         <p>
             <input id="address" type="text"> or 
             <button id="use_my_location" type="submit" class="button">
                 Use My Location
             </button>
-            <script  type="text/javascript">
-    
-</script>
         </p>
         Choose Airport:
         <p>

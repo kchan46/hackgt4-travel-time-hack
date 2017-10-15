@@ -1,66 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <script type="text/javascript" src="javascript/script.js"></script>
-</head>
-<body>
-        <h1> Results </h1>
+  </head>
+  <body>
+    <h1> Results </h1>
+    <p>
+      Total Time Estimated (today): __________
+    </p>
+    <script type="text/javascript">
+      document.write ('<p>Current time is: <span id="date-time">', new Date().toLocaleString(), '<\/span>.<\/p>')
+      if (document.getElementById) onload = function () {
+        setInterval ("document.getElementById ('date-time').firstChild.data = new Date().toLocaleString()", 50)
+      }
+    </script>
+    Arrival Time (today): __________
     
-        <p>
-        Total Time Estimated (today): __________
-         </p>   
-        
-        
-        <p>
-        Current Time: __________
-        </p>
-        
+    <p>
+      Recommended Departure Time: ___________
+    </p>
+    <h1> Breakdown </h1>
+    <p id="morning-routine"></p>
+    <script>
+      if (getRoutine() == "") {
+        document.getElementById("morning-routine").innerHTML = "Morning Routine: 0 minutes";
+      } else {
+        document.getElementById("morning-routine").innerHTML = "Morning Routine: " + getRoutine() + " minutes";
+      }
+    </script>
 
-        Arrival Time (today): __________
-        
-        
-        <p>
-        Recommended Departure Time: ___________
-        </p>
+    <p>
+      Google Maps Travel Time: __________
+    </p>
 
-        <h1> Breakdown </h1>
-
-        <p>
-        Morning Routine: __________
-         </p>   
-        
-        
-        <p>
-        Google Maps Travel Time: __________
-        </p>
-        
-
-       Esimtated Parking/Luggage Time: __________
-        
-        
-        <p>
-        TSA-line time: ___________
-        </p>
-    
-        Would you like a phone notification day of? <input id="TSA-precheck" type="checkbox">
-
-        <p>
-          
-            <button id="finish" type="button" onclick="redirect3();">Finish</button>
-        </p>
-        <p>
-          curl -X GET --header "Authorization: Bearer O68OqqGKNrb5EC2hEGE6YIVFGeae" "http://deltaairlines-dev.apigee.net/v1/hack/flight/status?flightNumber=2049&flightOriginDate=2017-10-14"
-        </p>
-        
-</body>
-
-<iframe
-  width="450"
-  height="250"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyBzbVhRXdJ3CRpp1uhELInU0lDCk9_lHyI&origin=texas&destination=Atlanta" allowfullscreen>
-</iframe>
-
-</html>
+    Esimtated Parking/Luggage Time: __________
+    <p>
+      TSA-line time: ___________
+    </p>
+    Would you like a phone notification day of? <input id="TSA-precheck" type="checkbox">
+    <p>
+      <button id="finish" type="button" onclick="redirect3();">Finish</button>
+    </p>
+  </body>
+  <iframe id="showskill" scrolling="yes" height="350" width ="350" src=""></iframe>
+  <script>
+    if (getAddress() == "" || getAirport() == "") {
+      document.getElementById("showskill").src = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyBzbVhRXdJ3CRpp1uhELInU0lDCk9_lHyI&origin=atlanta&destination=Hartsfied Jackson Airport";
+    } else {
+      document.getElementById("showskill").src = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyBzbVhRXdJ3CRpp1uhELInU0lDCk9_lHyI&origin=" + getAddress() + "&destination=" + getAirport();
+    }
+  </script>
+  </html>

@@ -3,36 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>[HackGT 2017] Delta Travel Time Challenge</title>
-    <script type="text/javascript" src="javascript/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
 </head>
 <body>
 
-    <form name="form" id="second_form" method="post">
-        <p>
-        Morning Routine: <input id="routine" type="text">
-         </p>   
-        
-        
-        <p>
-        Mode of Transportation: 
-        <select name = "mode_of_transportation">
-            <option value = "Car">Car</option>
-            <option value = "Train">Train</option>
-        </select>
-        </p>
-        
+    <nav class="navbar navbar-light" style="background-color: #233C5B;">
+    </nav>
+    <center> <br>
+    <h1><b>Delta Travel Time Calculator</b></h1>
+    <br>
+    <hr>
+    <form name="form" id="first_form" method="post" role="form">
 
-        TSA Pre-Check?  <input id="TSA-precheck" type="checkbox">
+    <br><br>
+    <div class="col-sm-4 col-sm-offset-4">
+    <form name="form" id="second_form" method="post">
+        <div class="row">
+            <label for="Morning Routine" class="text-centre">Morning Routine <br><i>(Estimate the # of mins it takes for you to wake up and get out the door)</i></label> <br>
+            <input type="text" class="form-control" placeholder="25" id="first_form" id="routine" method="post">
+        </div>
+        <br> <br>
+
+        <div class="dropdown dropdown-container">
+            <label for="Morning Routine" class="text-centre">Mode of Transportation</label>
+            <button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"><span id="selected">Select </span>
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Car</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Train</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Uber</a></li>
+
+            </ul>
+          </div>
+          <br> <br>
+
+        <label class="checkbox-inline"><input type="checkbox" value=""><b>TSA Pre-Check?</b></label>
         
-        
-        <p>
-        Enter your phone number for day of notification: <input id="phone" type="text"> 
-        </p>
-        <p>
+        <br> <br> <br>
+       <div class="row">
+            <label for="Phone Number" class="text-centre">Phone number: <br><i>(Optional for notifications, data charges may apply)</i></label> <br>
+            <input type="text" class="form-control" placeholder="123456789" id="first_form" id="phone" method="post">
+        </div>
+        <br> <br>
             <! do this with js later to make sure it saves input data ->
-            <button id="next_page" type="button" onclick="redirect2();">Submit</button>
-        </p>
+        <button id="next_page" type="button" class="btn btn-primary" onclick="redirect2();">Submit</button>
+    </center>
     </form>
-   
+</div>
 </body>
+
+<script>
+    $('.dropdown-menu a').click(function(){
+    $('#selected').text($(this).text());
+  });
+</script>
 </html>

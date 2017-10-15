@@ -3,32 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>[HackGT 2017] Delta Travel Time Challenge</title>
-    <script type="text/javascript" src="javascript/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
 </head>
+
 <body>
-    
-    <h1></h1>
-    <h1>Delta Travel Time Calculator</h1>
-    <form name="form" id="first_form" method="post">
-        Input Home Address:
-        <p>
-            <input id="address" type="text"> or 
-            <button id="use_my_location" type="submit" class="button">
-                Use My Location
-            </button>
-        </p>
-        Input Date of Flight Departure (yyyy-mm-dd):
-        <p>
-            <input id="date_of_flight" type="text">
-        </p>
-        Input Flight Number:
-        <p>
-            <input id="flight_number" type="text">
-        </p>
-        <p>
-            <! do this with js later to make sure it saves input data ->
-            <button id="next_page" type="button" onclick="redirect();">Continue</button>
-        </p>
+    <nav class="navbar navbar-light" style="background-color: #233C5B;">
+    </nav>
+    <center> <br>
+    <h1><b>Delta Travel Time Calculator</h1></b>
+    <br>
+    <hr>
+    <form name="form" id="first_form" method="post" role="form">
+
+    <br><br>
+    <div class="col-sm-4 col-sm-offset-4">
+        <div class="row">
+            <label for="address" class="text-centre"> Home Address</label>
+            <input type="text" class="form-control" placeholder="123 Eighth Street" id="first_form" id="inputsm" method="post">
+        </div>
+        <br>
+        <label class="text-centre"> or </label>
+        <button id="use_my_location" type="submit" class="btn btn-primary">
+            Use My Location
+        </button>
+        <br><br><br>
+        <div class="row">
+            <label for="flight_date" class="text-centre">Input Date of Flight Departure (yyyy-mm-dd):</label>
+            <input type="text" class="form-control" placeholder="2017-10-13" id="date_of_flight">
+             
+        </div>
+        <br>
+        <div class="row">
+            <label for="flight_date" class="text-centre">Input Flight Number:
+            </label>
+            <input type="text" class="form-control" placeholder="1234567" input id="flight_number">
+        </div>
+        <br>
+        <! do this with js later to make sure it saves input data ->
+        <button id="next_page" type="button" class="btn btn-primary" onclick="redirect();">Continue</button>
+
+    </center>
     </form>
+</div>
 </body>
 </html>
